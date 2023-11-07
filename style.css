@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+    overflow-x: hidden;
+}
+
+.wrapper{
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+.black-back{
+    width: 100%;
+    height: 100vh;
+    background-color: #505050bc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: none;
+}
+.black-back > .menu{
+    height: 100vh;
+    position: absolute;
+    background-color: white;
+    padding: 20px 30px;
+    right: 0;
+    width: 180px;
+    color: hsl(0, 0%, 41%);
+}
+.menu__links > .ft > ul,
+.menu__links > .sc > ul{
+    position: relative;
+    height: 90px;
+    top: -10px;
+    padding: 0;
+    margin-left: 80px;
+    box-shadow: none;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.menu__links> .sc >ul{
+    margin-top: 15px;
+    margin-left: 22px;
+}
+.menu__links> .sc >ul > li{
+    margin-bottom: 0;
+}
+
+.menu__links > .ft > .active,
+.menu__links > .sc > .active{
+    display: block;
+}
+.menu__links > .ft > ul >li{
+    margin-bottom: -5px;
+}
+.menu > img{
+    position: absolute;
+    right: 30px;
+}
+
+.menu > .menu__links{
+    margin-top: 50px;
+    font-family: "Epilogue" , sans-serif;
+    line-height: 40px;
+}
+.menu__auth > li ,
+.menu__links > li{
+    cursor: pointer;
+    font-weight: 500;
+}
+.menu > .menu__auth{
+    text-align: center;
+    font-family: "Epilogue" , sans-serif;
+    line-height: 40px;
+    margin-top: 15px;
+}
+
+.menu__auth > li:nth-child(2){
+    border: 2px solid hsl(0, 0%, 41%);
+    padding: 1px 10px ;
+    margin-right: 0;
+    border-radius: 15px;
+}
+header{
+    margin-top: 25px ;
+    margin-bottom: 45px;
+}
+
+nav > ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav > ul > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right_navs > img{
+    display: none;
+}
+.home__right > .mobile{
+    display: none;
+}
+
+.left_navs > .ft{
+    margin-left: 61px;
+}
+
+.ft , .sc{
+    position: relative;
+}
+
+.ft > ul,
+.sc > ul{
+    position: absolute;
+    padding: 24px;
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.372);
+    border-radius: 5px;
+    top: 35px;
+    display: none;
+}
+
+.ft > ul{
+    left: -60px;
+    width: 132px;
+    height: 159px;
+}
+
+.ft > ul > li,
+.sc > ul > li{
+    margin-bottom: 25px;
+}
+.ft > ul > li > img{
+    margin-right: 16px;
+}
+.sc > ul{
+    width: 100px;
+}
+.left_navs > li,
+.right_navs > li{
+    margin-right: 40px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: hsl(0, 0%, 41%);
+}
+.right_navs > li:nth-child(2){
+    border: 2px solid hsl(0, 0%, 41%);
+    padding: 10px 15px ;
+    margin-right: 0;
+    border-radius: 15px;
+}
+
+.left_navs > li:hover,
+.right_navs > li:hover{
+    color: hsl(0, 0%, 8%);
+}
+
+.right_navs > li:nth-child(2):hover{
+    border: 2px solid hsl(0, 0%, 8%);
+}
+
+#home > .home__content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.home__content > .home__right > .desktop{
+    width: 410px;
+    height: 483px;
+}
+
+.home__content > .home__left > span{
+    font-size: 82px;
+    font-family: "Epilogue" , sans-serif;
+    font-weight: 700;
+}
+
+.home__left > p{
+    font-size: 18px;
+    font-family: "Epilogue" , sans-serif;
+    width: 423px;
+    margin: 40px 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: hsl(0, 0%, 41%);
+    line-height: 28px;
+}
+.home__left > button{
+    padding: 10px 15px ;
+    background-color: hsl(0, 0%, 8%);
+    border: none;
+    outline: none;
+    color: hsl(0, 0%, 98%);
+    border-radius: 10px;
+}
+.home__left > .left__splogos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 576px) {
+    .wrapper{
+        max-width: 100%;
+    }
+    ul{
+        padding: 0 20px;
+    }
+    .left_navs > li,
+    .right_navs > li{
+        display: none;
+    }
+    .right_navs > img{
+        display: block;
+    }
+
+    .home__content{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .home__content > .home__left {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home__content > .home__left > span{
+        font-size: 35px;
+        margin-top: 15px;
+    }
+    .home__content > .home__left > p{
+        font-size: 14px;
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .home__left > .left__splogos > img{
+        width: 50px;
+    }
+    .left__splogos{
+        width: 90%;
+        position: relative;
+        top: -30px;
+    }
+    .home__right > .desktop{
+        display: none;
+    }
+    .home__right > .mobile{
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .wrapper{
+        max-width: 540px;
+    }
+    ul{
+        padding: 0 20px;
+    }
+    .left_navs > li,
+    .right_navs > li{
+        display: none;
+    }
+    .right_navs > img{
+        display: block;
+    }
+
+    .home__content{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .home__content > .home__left {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home__content > .home__left > span{
+        font-size: 35px;
+        margin-top: 15px;
+    }
+    .home__content > .home__left > p{
+        font-size: 14px;
+        width: 90%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .home__left > .left__splogos > img{
+        width: 50px;
+    }
+    .left__splogos{
+        width: 90%;
+        position: relative;
+        top: -30px;
+    }
+    .home__right > .desktop{
+        display: none;
+    }
+    .home__right > .mobile{
+        display: block;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 768px){
+    .wrapper{
+        max-width: 720px;
+    }
+    ul{
+        padding: 0 20px;
+    }
+    .left_navs > li,
+    .right_navs > li{
+        display: none;
+    }
+    .right_navs > img{
+        display: block;
+    }
+
+    .home__content{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .home__content > .home__left {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .home__content > .home__left > span{
+        font-size: 65px;
+        margin-top: 30px;
+    }
+    .home__content > .home__left > p{
+        font-size: 18px;
+        width: 80%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .home__left > .left__splogos > img{
+        width: 90px;
+    }
+    .left__splogos{
+        width: 90%;
+        position: relative;
+        top: -30px;
+    }
+    .home__right > .desktop{
+        display: none;
+    }
+    .home__right > .mobile{
+        display: block;
+        width: 100%;
+    }
+   
+}
+@media screen and (min-width: 1200px) {
+    .wrapper{
+        min-width: 1200px;
+    }       
+    ul{
+        padding: 0;
+    }
+    .left_navs > li,
+    .right_navs > li{
+        display: block;
+    }
+    .right_navs > img{
+        display: none;
+    }
+
+    .home__content{
+        flex-direction: row;
+    }
+
+    .home__content > .home__left {
+        text-align: start;
+        display: block;
+    }
+    .home__content > .home__left > span{
+
+        font-size: 104px;
+        margin-top: 30px;
+    }
+    .home__content > .home__left > p{
+        font-size: 18px;
+        width: 423px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .home__left > .left__splogos > img{
+        width: 90px;
+    }
+    .left__splogos{
+        width: 90%;
+        position: relative;
+        top: -30px;
+    }
+    .home__right > .desktop{
+        display: block;
+    }
+    .home__right > .mobile{
+        display: none;
+    }   
+}
